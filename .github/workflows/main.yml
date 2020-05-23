@@ -5,6 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     name: Actionman
     steps:
+    - name: Checkout repo
+      id: checkout
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0 # clone whole lot, so we can compare to master
     - name: Run actionman
       id: actionman
       uses: lstoll/actionman@lstoll-pr-comments
