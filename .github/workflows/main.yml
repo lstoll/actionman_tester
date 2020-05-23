@@ -1,0 +1,15 @@
+on: [push]
+
+jobs:
+  actionman:
+    runs-on: ubuntu-latest
+    name: Testing things out
+    steps:
+    - name: Run the action
+      id: actionman
+      uses: lstoll/actionman@master
+      with:
+        repository: ${{ github.repository }}
+        token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Get the output time
+      run: echo "The time was ${{ steps.actionman.outputs.time }}"
