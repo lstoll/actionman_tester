@@ -8,6 +8,8 @@ jobs:
     - name: Run the action
       id: actionman
       uses: lstoll/actionman@master
+      env:
+        ACTIONMAN_DEBUG: true
       with:
         repository: ${{ github.repository }}
         token: ${{ secrets.GITHUB_TOKEN }}
