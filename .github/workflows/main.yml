@@ -7,7 +7,7 @@ jobs:
     steps:
     - name: Run actionman
       id: actionman
-      uses: lstoll/actionman@master
+      uses: lstoll/actionman@lstoll-pr-comments
       env:
         ACTIONMAN_DEBUG: true
       with:
